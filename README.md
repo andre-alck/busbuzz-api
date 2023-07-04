@@ -1,2 +1,4 @@
 # busbuzz-api
-A API busbuzz-api é um serviço de recebimento e armazenamento de dados destinado a notificações direcionadas aos motoristas de ônibus. Essa API permite que os usuários enviem informações relevantes, como título, corpo e imagem de uma notificação, que serão posteriormente armazenadas no Cloud Firestore.
+The busbuzz-api is a data receiving and storage service designed for targeted notifications to bus drivers. This API enables users to send relevant information, such as the title, body, and image of a notification, which will be stored in the Cloud Firestore.
+
+Through this API, users can send important messages and updates to bus drivers, keeping them informed about relevant events, route changes, weather conditions, or any other information necessary for the safe and efficient operation of public transportation.
