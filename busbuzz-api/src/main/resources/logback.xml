@@ -18,6 +18,6 @@
         <credentialsFile>./src/main/resources/key.json</credentialsFile>
     </appender>
     <root level="info">
-        <appender-ref ref="CLOUD" />
+        <appender-ref ref="CLOUD"/>
     </root>
 </configuration>
