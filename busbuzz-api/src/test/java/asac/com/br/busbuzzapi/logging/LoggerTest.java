@@ -30,7 +30,7 @@ class LoggerTest {
     }
 
     @Test
-    public void dadoLoggerFooBarQuandoExecutadoMetodoInfoEntaoDeveLogarUmaNovaInformacaoEVerificaLaAtravesDoAppender() {
+    void givenLoggerFooBarWhenCalledInfoMethodThenShouldLogANewInformationAndVerifyItThroughAppender() {
         LoggerFooBar.info();
 
         assertEquals("LoggerFooBar.info();", logs.get(0).getMessage());
@@ -38,14 +38,14 @@ class LoggerTest {
     }
 
     @Test
-    public void dadoLoggerFooBarQuandoExecutadoMetodoDebugEntaoNaoDeveLogarUmaNovaDepuracao() {
+    void givenLoggerFooBarWhenCalledDebugMethodThenItShouldNotLogANewDebugMessage() {
         LoggerFooBar.debug();
 
         assertTrue(logs.isEmpty());
     }
 
     @Test
-    public void dadoLoggerFooBarQuandoExecutadoMetodoErrorEntaoDeveLogarUmNovoErroEVerificaLoAtravesDoAppender() {
+    void givenLoggerFooBarWhenCalledErrorMethodThenShouldLogANewErrorAndVerifyItThroughAppender() {
         LoggerFooBar.error();
 
         assertEquals("LoggerFooBar.error();", logs.get(0).getMessage());
