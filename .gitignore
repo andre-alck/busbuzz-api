@@ -1,2 +1,4 @@
 
 busbuzz-api/src/main/resources/key.json
+busbuzz-api/src/main/resources/firestore_credentials.json
+busbuzz-api/src/main/resources/firebase_credentials.json
