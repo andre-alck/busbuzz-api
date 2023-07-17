@@ -1,4 +1,4 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.config;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
@@ -26,7 +26,7 @@ public class FirebaseConfig {
         setServiceAccountJson();
         setGoogleCredentials();
         setFirebaseOptions();
-        FirebaseApp.initializeApp(firebaseOptions);
+        FirebaseApp.initializeApp(this.firebaseOptions);
     }
 
     public FirebaseApp getFirebase() {
@@ -34,7 +34,7 @@ public class FirebaseConfig {
     }
 
     private void setServiceAccountJson() {
-        String serviceAccountJsonFilePath = "src/main/resources/firebase_credentials.json";
+        String serviceAccountJsonFilePath = "src/main/resources/firebase_service_account_key.json";
         try {
             this.serviceAccountJson = new FileInputStream(serviceAccountJsonFilePath);
         } catch (IOException e) {
@@ -45,7 +45,7 @@ public class FirebaseConfig {
 
     private void setGoogleCredentials() {
         try {
-            googleCredentials = GoogleCredentials.fromStream(serviceAccountJson);
+            this.googleCredentials = GoogleCredentials.fromStream(serviceAccountJson);
         } catch (IOException e) {
             String log = String.format("Could not obtain Google Credentials. The following exception was thrown: %s", e.getMessage());
             logger.error(log);
