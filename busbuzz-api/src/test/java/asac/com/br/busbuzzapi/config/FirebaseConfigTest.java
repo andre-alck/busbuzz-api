@@ -2,7 +2,6 @@ package asac.com.br.busbuzzapi.config;
 
 import com.google.firebase.FirebaseApp;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
