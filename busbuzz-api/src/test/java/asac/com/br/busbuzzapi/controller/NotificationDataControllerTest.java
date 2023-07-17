@@ -1,5 +1,6 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.controller;
 
+import asac.com.br.busbuzzapi.model.NotificationDataModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -70,7 +71,7 @@ class NotificationDataControllerTest {
     }
 
     @Test
-    void givenNullTextThenShouldThrowAlgo() throws Exception {
+    void givenNullTextThenShouldThrowAssertionError() throws Exception {
         NotificationDataModel model = new NotificationDataModel("title", null, "https://avatars.githubusercontent.com/u/60830711?s=400&u=b201e170a816d600b000cde8a2135101fff0ec7f&v=4", "name");
         String modelJson = objectMapper.writeValueAsString(model);
 

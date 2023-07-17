@@ -1,4 +1,4 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.config;
 
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.FirebaseApp;
@@ -14,7 +14,7 @@ public class FirestoreConfig {
     private FirebaseConfig firebaseConfig;
 
     @Bean
-    Firestore getFirestore() {
+    public Firestore getFirestore() {
         FirebaseApp firebaseApp = firebaseConfig.getFirebase();
         return FirestoreClient.getFirestore(firebaseApp);
     }

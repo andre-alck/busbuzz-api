@@ -1,5 +1,7 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.service;
 
+import asac.com.br.busbuzzapi.config.FirestoreConfig;
+import asac.com.br.busbuzzapi.model.FirestoreDocumentDataModel;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.WriteResult;
@@ -18,7 +20,7 @@ public class NotificationDataService {
     @Autowired
     private FirestoreConfig firestoreConfig;
 
-    WriteResult addData(FirestoreDocumentData firestoreDocumentData) {
+    WriteResult addData(FirestoreDocumentDataModel firestoreDocumentData) {
         String collection = firestoreDocumentData.collection();
         String document = firestoreDocumentData.document();
         DocumentReference documentReference = firestoreConfig.getFirestore().collection(collection).document(document);

@@ -1,5 +1,6 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.controller;
 
+import asac.com.br.busbuzzapi.model.NotificationDataModel;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package asac.com.br.busbuzzapi;
+package asac.com.br.busbuzzapi.model;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
