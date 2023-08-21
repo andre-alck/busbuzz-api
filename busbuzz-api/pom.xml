@@ -53,6 +53,7 @@
             <artifactId>firebase-admin</artifactId>
             <version>9.2.0</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -60,6 +61,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>appengine-maven-plugin</artifactId>
+                <version>2.4.4</version>
             </plugin>
         </plugins>
     </build>
